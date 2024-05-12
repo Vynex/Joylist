@@ -1,0 +1,146 @@
+.cover {
+  width: 100vw;
+  height: 40vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 40%;
+
+  opacity: 0.2;
+  filter: blur(4px);
+
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.container {
+  padding: 0 1rem;
+  padding-top: 3rem;
+  margin-right: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.boxart {
+  height: 500px;
+  width: auto;
+  border-radius: 15px;
+}
+
+.meta {
+  display: flex;
+  position: relative;
+  column-gap: 30px;
+}
+
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 32px;
+}
+
+.platforms {
+  padding: 16px 4px;
+  color: #AAAAAA;
+  font-weight: 600;
+  list-style-type: none;
+}
+
+.platforms li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #333333;
+}
+
+.platforms li>span:first-of-type {
+  width: 40%;
+}
+
+.header {
+  display: flex;
+}
+
+.about h1 {
+  width: 90%;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #666;
+}
+
+.titles {
+  flex: 1;
+}
+
+.rating {
+  margin-top: 8px;
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+
+  font-size: 3rem;
+  font-weight: 900;
+
+  cursor: default;
+}
+
+.tags {
+  padding: 20px 0;
+  margin-bottom: -10%;
+}
+
+.info {
+  width: 100%;
+  margin-top: 20px;
+  letter-spacing: 1.2px;
+  font-weight: 300;
+}
+
+.modes, .genres { list-style-type: none; display: flex; }
+
+.modes { margin-bottom: 12px; }
+
+.modes li {
+  text-decoration: underline;
+  text-decoration-color: #666666;
+}
+
+.modes li:not(:last-child) { margin-right: 6px; }
+
+.genres {
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 10px;
+}
+
+.genres li {
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid #FFFFFF;
+
+  cursor: default;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.genres li:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}

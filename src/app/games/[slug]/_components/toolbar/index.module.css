@@ -1,0 +1,5 @@
+.actions {
+  margin: 8px 0;
+  display: flex;
+  column-gap: 12px;
+}
