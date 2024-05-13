@@ -13,3 +13,9 @@
 .logo {
   font-weight: 900;
 }
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0 2rem;
+  }
+}

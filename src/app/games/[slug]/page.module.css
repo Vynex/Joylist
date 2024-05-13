@@ -17,9 +17,7 @@
 }
 
 .container {
-  padding: 0 1rem;
   padding-top: 3rem;
-  margin-right: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -85,8 +83,8 @@
 
 .rating {
   margin-top: 8px;
-  width: 75px;
-  height: 75px;
+  width: 4.5rem;
+  height: 4.5rem;
 
   display: flex;
   align-items: center;
@@ -143,4 +141,19 @@
 .genres li:hover {
   background-color: #FFFFFF;
   color: #000000;
+}
+
+@media screen and (max-width: 800px) {
+  .boxart {
+    height: unset;
+    width: calc(100vw - 6rem);
+  }
+
+  .meta {
+    flex-direction: column;
+  }
+
+  .tags {
+    margin-bottom: unset;
+  }
 }

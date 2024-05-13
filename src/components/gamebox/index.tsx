@@ -7,6 +7,7 @@ import styles from "./index.module.css";
 
 export default function GameBox({ data }: { data: GameListType }) {
   return (
+    <Link href={"/games/" + data.slug} className={styles.boxcover} legacyBehavior>
     <article className={styles.cover}>
       <Image alt={data.name} src={getImage(data.cover.image_id)} height={0} width={0} sizes="100vw" />
 
@@ -20,14 +21,16 @@ export default function GameBox({ data }: { data: GameListType }) {
           <Link href={"/games/" + data.slug} className={styles.title}>
             <span className={styles.label}>{data.name}</span>
           </Link>
-          <span className={styles.meta}>{formatDate(data.first_release_date * 1000)}</span>
-
-          <span className={styles.rating} style={{ borderColor: getRatingColor(data.aggregated_rating), color: getRatingColor(data.aggregated_rating) }}>
-            {Math.round(data.aggregated_rating)}
-          </span>
         </div>
 
         <div className={styles.table}>
+          <div className={styles.header}>
+            <span className={styles.meta}>{formatDate(data.first_release_date * 1000)}</span>
+            <span className={styles.rating} style={{ borderColor: getRatingColor(data.aggregated_rating), color: getRatingColor(data.aggregated_rating) }}>
+              {Math.round(data.aggregated_rating)}
+            </span>
+          </div>
+
           <div className={styles.row}>
             <span className={styles.key}>Genres</span>
             <span className={styles.value}>{getCommaSeparatedValues(data.genres, "name")}</span>
@@ -45,6 +48,7 @@ export default function GameBox({ data }: { data: GameListType }) {
         </div>
       </div>
     </article>
+    </Link>
   )
 }
 

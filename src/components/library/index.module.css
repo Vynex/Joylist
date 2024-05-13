@@ -1,9 +1,13 @@
 .container {
   height: 100%; width: 100%;
-  padding: 2 0;
   padding-bottom: 4rem;
 
-  display: grid;
-  grid-gap: 0 24px;
-  grid-template-columns: repeat(4, calc((100vw - 11rem - 300px - 72px) / 4));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    justify-content: center;
+  }
 }
