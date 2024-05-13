@@ -22,7 +22,7 @@ export default function Sidebar() {
   );
 }
 
-function LinkItem({ nm, Icon }) {
+function LinkItem({ nm, Icon }: { nm: string, Icon: React.FC }) {
   return (
     <li className={styles.link}>
       <div className={styles.iconContainer}>
